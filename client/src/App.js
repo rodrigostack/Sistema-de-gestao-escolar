@@ -1,13 +1,16 @@
-import logo from './logo.svg';
-import Navbar from './navbar/Navbar'
-import Home from './home/Home'
 
+import Navbar from './navbar/Navbar'
+import Routes from './rotas/routes'
+
+import { HashRouter } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Home/>
+      <HashRouter>
+          <Navbar/>
+          <Routes/>
+      </HashRouter>    
     </div>
   );
 }

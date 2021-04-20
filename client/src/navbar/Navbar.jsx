@@ -1,6 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import logo from '../imagens/smart.png'
+import { Link } from 'react-router-dom'
 
 export default function(){
     return(
@@ -14,7 +15,7 @@ export default function(){
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a className="nav-link" aria-current="page" href="#">Home</a>
+          <Link className="nav-link" aria-current="page" to="/home">Home</Link>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="#">Quem Somos?</a>
