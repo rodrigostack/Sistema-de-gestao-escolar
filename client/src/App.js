@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import Navbar from './navbar/Navbar'
+import Home from './home/Home'
 
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-        <h1>Ola meu cliente</h1>
+      <Home/>
     </div>
   );
 }
