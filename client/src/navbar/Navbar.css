@@ -1,0 +1,13 @@
+.imgclass{
+    width: 150px;
+    height: 50px;
+}
+
+.navback{
+ background-color: lightblue;
+}
+
+li a{
+    color: navy;
+    font-weight: bold;
+}
