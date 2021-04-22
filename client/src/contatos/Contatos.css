@@ -1,0 +1,29 @@
+.containerprincipal{
+    margin-top: 5px;
+    background-color: azure ;
+
+}
+
+.cardheader{
+    background-color: lightblue;
+    text-align: center;
+    color: mintcream;
+    text-shadow: 2px 2px 3px navy;
+}
+
+.cardbody img {
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+}
+
+.cardfooter{
+    background-color: lightblue;
+    }
+
+ .cardfooter h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: blue;
+ }   
