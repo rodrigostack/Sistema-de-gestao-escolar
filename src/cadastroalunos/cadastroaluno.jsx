@@ -1,5 +1,6 @@
 import React from 'react'
 import './cadastroaluno.css'
+import InputMask from 'react-input-mask'
 
 export default function(){
     return(
@@ -15,19 +16,19 @@ export default function(){
                 </div>
                 <div className="col-md-6">
                     <label for="inputtel" className="form-label labelsform">Telefone:</label>
-                    <input type="tel" className="form-control" id="inputtel" placeholder="Informe seu telefone"/>
+                    <InputMask mask="(99)9999-9999" type="tel" className="form-control" id="inputtel" placeholder="Informe seu telefone"/>
                 </div>
                 <div className="col-md-6">
                     <label for="inputcpf" className="form-label labelsform">CPF:</label>
-                    <input type="text" className="form-control" id="inputcpf" placeholder="Informe seu cpf"/>
+                    <InputMask mask="999.999.999-99" type="text" className="form-control" id="inputcpf" placeholder="Informe seu cpf"/>
+                </div>
+               <div className="col-12">
+                    <label for="inputcurso" className="form-label labelsform">Curso:</label>
+                    <input type="text" className="form-control" id="inputcurso" placeholder="Curso de interesse"/>
                 </div>
                 <div className="col-12">
                     <label for="inputAddress" className="form-label labelsform">Endereço:</label>
                     <input type="text" className="form-control" id="inputAddress" placeholder="Digite seu endereço"/>
-                </div>
-                <div className="col-12">
-                    <label for="inputcurso" className="form-label labelsform">Curso:</label>
-                    <input type="text" className="form-control" id="inputcurso" placeholder="Curso de interesse"/>
                 </div>
                 <div className="col-md-6">
                     <label for="inputCity" className="form-label labelsform">Cidade</label>
@@ -45,7 +46,7 @@ export default function(){
                 </div>
                 <div className="col-md-2">
                     <label for="inputZip" className="form-label labelsform">CEP</label>
-                    <input type="text" className="form-control" id="inputZip"/>
+                    <InputMask mask="99999-999" type="text" className="form-control" id="inputZip"/>
                 </div>
                    <button type="submit" className="btn btn-primary col-md-3">Cadastrar aluno</button>
                          

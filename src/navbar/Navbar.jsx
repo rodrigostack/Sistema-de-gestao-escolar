@@ -15,7 +15,7 @@ export default function(){
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul className="navbar-nav">
                     <li className="nav-item">
-                      <Link className="nav-link" aria-current="page" to="/home">Home</Link>
+                      <Link className="nav-link" aria-current="page" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="/quemsomos">Quem Somos?</Link>

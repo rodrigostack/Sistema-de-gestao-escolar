@@ -10,7 +10,7 @@ export default function(){
     return(
       
         <Switch>
-            <Route exact path="/home" component={Home}/>
+            <Route exact path="/" component={Home}/>
             <Route exact path="/quemsomos" component={Quemsomos}/>
             <Route exact path="/contatos" component={Contatos}/>
             <Route exact path="/cadastroaluno" component={Cadastroaluno}/>
