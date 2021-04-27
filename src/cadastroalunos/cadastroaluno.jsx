@@ -20,7 +20,7 @@ export default function(){
            .then((resposta)=>{
                setEndereco(resposta.data.logradouro);
                setCidade(resposta.data.localidade);
-               //setEstado(resposta.data.uf)
+               setEstado(resposta.data.uf)
            }) 
         }
     },[cep])
@@ -62,8 +62,8 @@ export default function(){
                 </div>
                 <div className="col-md-4">
                     <label for="inputState" className="form-label labelsform">Estado</label>
-                    <select id="inputState" className="form-select" name="estado" onChange={e=> setEstado(e.target.value)}>
-                        <option selected>Escolha...</option>
+                    <select id="inputState" className="form-select" name="estado" onChange={e=> setEstado(e.target.value)} value={estado}>
+                        <option selected></option>
                         <option value='SP'>SP</option>
                         <option value='RJ'>RJ</option>
                         <option value='MG'>MG</option>
