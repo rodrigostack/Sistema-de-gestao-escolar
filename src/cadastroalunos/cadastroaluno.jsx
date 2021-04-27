@@ -1,6 +1,7 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import './cadastroaluno.css'
 import InputMask from 'react-input-mask'
+import Axios from 'axios'
 
 export default function(){
  const[nome,setNome] = useState();
@@ -11,8 +12,18 @@ export default function(){
  const[endereco,setEndereco] = useState();
  const[cidade,setCidade] = useState();
  const[estado,setEstado] = useState();
- const[cep,setCep] = useState();
+ const[cep,setCep] = useState("");
 
+    useEffect(()=>{
+        if (cep.length > 8) {
+           Axios.get("http://viacep.com.br/ws/01001000/json/")
+           .then((resposta)=>{
+               setEndereco(resposta.data.logradouro);
+               setCidade(resposta.data.localidade);
+               //setEstado(resposta.data.uf)
+           }) 
+        }
+    },[cep])
 
     return(
         <div className="container">
