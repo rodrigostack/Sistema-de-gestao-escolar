@@ -42,7 +42,7 @@ export default function(){
                 </div>
                 <div className="col-md-6">
                     <label for="inputcpf" className="form-label labelsform">CPF:</label>
-                    <InputMask mask="999.999.999-99" type="text" className="form-control" id="inputcpf" name="cpf" onChange={e=> setCpf(e.target.value)} value={cep} placeholder="Informe seu cpf"/>
+                    <InputMask mask="999.999.999-99" type="text" className="form-control" id="inputcpf" name="cpf" onChange={e=> setCpf(e.target.value)} value={cpf} placeholder="Informe seu cpf"/>
                 </div>
                <div className="col-12">
                     <label for="inputcurso" className="form-label labelsform">Curso:</label>
@@ -67,8 +67,8 @@ export default function(){
                     </select>
                 </div>
                 <div className="col-md-2">
-                    <label for="inputZip" className="form-label labelsform" name="cep" onChange={e=> setCep(e.target.value)} value={cep}>CEP</label>
-                    <InputMask mask="99999-999" type="text" className="form-control" id="inputZip" placeholder="Informe seu CEP"/>
+                    <label for="inputZip" className="form-label labelsform" >CEP</label>
+                    <InputMask mask="99999-999" type="text" className="form-control" id="inputZip" name="cep" onChange={e=> setCep(e.target.value)} value={cep} placeholder="Informe seu CEP"/>
                 </div>
                    <button type="submit" className="btn btn-primary col-md-3">Cadastrar aluno</button>
                          
