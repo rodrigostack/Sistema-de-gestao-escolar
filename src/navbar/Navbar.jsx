@@ -29,7 +29,7 @@ export default function(){
                       </a>
                       <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><Link className="dropdown-item" to="/cadastroaluno">Cadastrar Alunos</Link></li>
-                        <li><a className="dropdown-item" href="#">Cadastrar Cursos</a></li>
+                        <li><Link className="dropdown-item" to="/cadastrocurso">Cadastrar Cursos</Link></li>
                         <li><a className="dropdown-item" href="#">Alunos Cadastrados</a></li>
                         <li><a className="dropdown-item" href="#">Cursos Cadastrados</a></li>
                       </ul>
