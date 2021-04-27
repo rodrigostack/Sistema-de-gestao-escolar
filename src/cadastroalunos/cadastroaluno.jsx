@@ -48,6 +48,10 @@ export default function(){
                     <label for="inputcurso" className="form-label labelsform">Curso:</label>
                     <input type="text" className="form-control" id="inputcurso" name="Curso" onChange={e=> setCurso(e.target.value)} value={curso} placeholder="Curso de interesse"/>
                 </div>
+                <div className="col-md-2">
+                    <label for="inputZip" className="form-label labelsform" >CEP</label>
+                    <InputMask mask="99999-999" type="text" className="form-control" id="inputZip" name="cep" onChange={e=> setCep(e.target.value)} value={cep} placeholder="Informe seu CEP"/>
+                </div>
                 <div className="col-12">
                     <label for="inputAddress" className="form-label labelsform">Endereço:</label>
                     <input type="text" className="form-control" id="inputAddress" name="endereco" onChange={e=> setEndereco(e.target.value)} value={endereco} placeholder="Digite seu endereço"/>
@@ -66,10 +70,7 @@ export default function(){
                         <option value='ES'>ES</option>
                     </select>
                 </div>
-                <div className="col-md-2">
-                    <label for="inputZip" className="form-label labelsform" >CEP</label>
-                    <InputMask mask="99999-999" type="text" className="form-control" id="inputZip" name="cep" onChange={e=> setCep(e.target.value)} value={cep} placeholder="Informe seu CEP"/>
-                </div>
+                
                    <button type="submit" className="btn btn-primary col-md-3">Cadastrar aluno</button>
                    <button type="reset" className="btn btn-secondary col-md-3">Cadastrar novo aluno</button>
                 
