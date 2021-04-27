@@ -16,7 +16,7 @@ export default function(){
 
     useEffect(()=>{
         if (cep.length > 8) {
-           Axios.get("http://viacep.com.br/ws/01001000/json/")
+           Axios.get(`http://viacep.com.br/ws/${cep}/json/`)
            .then((resposta)=>{
                setEndereco(resposta.data.logradouro);
                setCidade(resposta.data.localidade);
@@ -71,8 +71,7 @@ export default function(){
                     <InputMask mask="99999-999" type="text" className="form-control" id="inputZip" name="cep" onChange={e=> setCep(e.target.value)} value={cep} placeholder="Informe seu CEP"/>
                 </div>
                    <button type="submit" className="btn btn-primary col-md-3">Cadastrar aluno</button>
-                         
-                    <button type="reset" className="btn btn-secondary col-md-3">Cadastrar novo aluno</button>
+                   <button type="reset" className="btn btn-secondary col-md-3">Cadastrar novo aluno</button>
                 
              </form>
         </div>
