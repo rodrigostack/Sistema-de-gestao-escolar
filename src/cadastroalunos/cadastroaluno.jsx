@@ -10,6 +10,7 @@ export default function(){
  const[cpf,setCpf] = useState();
  const[curso,setCurso] = useState();
  const[endereco,setEndereco] = useState();
+ const[bairro,setBairro] = useState();
  const[cidade,setCidade] = useState();
  const[estado,setEstado] = useState();
  const[cep,setCep] = useState("");
@@ -20,6 +21,7 @@ export default function(){
            .then((resposta)=>{
                setEndereco(resposta.data.logradouro);
                setCidade(resposta.data.localidade);
+               setBairro(resposta.data.bairro)
                setEstado(resposta.data.uf)
            }) 
         }
@@ -55,6 +57,10 @@ export default function(){
                 <div className="col-12">
                     <label for="inputAddress" className="form-label labelsform">Endereço:</label>
                     <input type="text" className="form-control" id="inputAddress" name="endereco" onChange={e=> setEndereco(e.target.value)} value={endereco} placeholder="Digite seu endereço"/>
+                </div>
+                <div className="col-12">
+                    <label for="inputbairro" className="form-label labelsform">Bairro:</label>
+                    <input type="text" className="form-control" id="inputbairro" name="bairro" onChange={e=> setBairro(e.target.value)} value={bairro} placeholder="Digite seu bairro"/>
                 </div>
                 <div className="col-md-6">
                     <label for="inputCity" className="form-label labelsform">Cidade</label>
