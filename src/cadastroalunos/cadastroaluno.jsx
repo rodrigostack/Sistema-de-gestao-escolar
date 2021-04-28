@@ -6,7 +6,7 @@ import Axios from 'axios'
 export default function(){
  const[nome,setNome] = useState();
  const[email,setEmail] = useState();
- const[tel,setTel] = useState();
+ const[telefone,setTel] = useState();
  const[cpf,setCpf] = useState();
  const[curso,setCurso] = useState();
  const[endereco,setEndereco] = useState();
@@ -27,6 +27,15 @@ export default function(){
         }
     },[cep])
 
+    const submit = () => {
+        Axios.post("http://localhost:3001/api/alunos",{
+            nome: nome, email: email, telefone: telefone, cpf: cpf, curso: curso, cep: cep, endereco: endereco, bairro: bairro, cidade: cidade, estado: estado
+        }).then(() => {
+            alert('Aluno cadastrado com sucesso');
+        });
+
+    }
+
     return(
         <div className="container">
            <form className="row g-3 containermain">
@@ -40,7 +49,7 @@ export default function(){
                 </div>
                 <div className="col-md-6">
                     <label for="inputtel" className="form-label labelsform">Telefone:</label>
-                    <InputMask mask="(99)99999-9999" type="tel" className="form-control" id="inputtel" name="tel" onChange={e=> setTel(e.target.value)} value={tel} placeholder="Informe seu telefone"/>
+                    <InputMask mask="(99)99999-9999" type="tel" className="form-control" id="inputtel" name="telefone" onChange={e=> setTel(e.target.value)} value={telefone} placeholder="Informe seu telefone"/>
                 </div>
                 <div className="col-md-6">
                     <label for="inputcpf" className="form-label labelsform">CPF:</label>
@@ -48,7 +57,7 @@ export default function(){
                 </div>
                <div className="col-12">
                     <label for="inputcurso" className="form-label labelsform">Curso:</label>
-                    <input type="text" className="form-control" id="inputcurso" name="Curso" onChange={e=> setCurso(e.target.value)} value={curso} placeholder="Curso de interesse"/>
+                    <input type="text" className="form-control" id="inputcurso" name="curso" onChange={e=> setCurso(e.target.value)} value={curso} placeholder="Curso de interesse"/>
                 </div>
                 <div className="col-md-2">
                     <label for="inputZip" className="form-label labelsform" >CEP</label>
@@ -77,7 +86,7 @@ export default function(){
                     </select>
                 </div>
                 
-                   <button type="submit" className="btn btn-primary col-md-3">Cadastrar aluno</button>
+                   <button type="submit" className="btn btn-primary col-md-3" onClick={submit}>Cadastrar aluno</button>
                    <button type="reset" className="btn btn-secondary col-md-3">Cadastrar novo aluno</button>
                 
              </form>
