@@ -1,0 +1,14 @@
+.alunoscad{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tableback{
+    background-color: rgb(228, 234, 241);
+}
+
+.default{
+    margin-top: 5px;
+}

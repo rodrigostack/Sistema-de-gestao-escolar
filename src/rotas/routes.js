@@ -6,6 +6,7 @@ import Quemsomos from '../quemsomos/Quemsomos'
 import Contatos from '../contatos/Contatos'
 import Cadastroaluno from '../cadastroalunos/cadastroaluno'
 import Cadastrocurso from '../cadastrocursos/cadastrocurso'
+import Alunoscadastrados from '../alunos/alunoscadastrados'
 
 export default function(){
     return(
@@ -16,6 +17,8 @@ export default function(){
             <Route exact path="/contatos" component={Contatos}/>
             <Route exact path="/cadastroaluno" component={Cadastroaluno}/>
             <Route exact path="/cadastrocurso" component={Cadastrocurso}/>
+            <Route exact path="/alunoscadastrados" component={Alunoscadastrados}/>
+
         </Switch>
     
     )
