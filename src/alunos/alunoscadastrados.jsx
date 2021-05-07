@@ -7,6 +7,12 @@ export default function(){
 
     const [dados, setDados] = useState([]);
 
+    useEffect(() => {
+        Axios.get('http://localhost:3001/api/alunoscadastrados').then((response) =>{
+            setDados(response.data);
+        });
+    },[]);
+
     return(
         <div className="default">
             <h2 className="h1 alunoscad">Alunos Cadastrados</h2>
@@ -27,19 +33,24 @@ export default function(){
                     </tr>
                 </thead>
                 <tbody className="tableback">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Otto</td>
-                    </tr>
+                  {dados.map((dado) => {
+                    return (
+                        <tr>
+                            <td>{dado.id}</td>
+                            <td>{dado.nome}</td>
+                            <td>{dado.email}</td>
+                            <td>{dado.telefone}</td>
+                            <td>{dado.cpf}</td>
+                            <td>{dado.curso}</td>
+                            <td>{dado.cep}</td>
+                            <td>{dado.endereco}</td>
+                            <td>{dado.bairro}</td>
+                            <td>{dado.cidade}</td>
+                            <td>{dado.estado}</td>
+                        </tr>
+                        );       
+                    })}
+                    
                   
                     
                    
