@@ -37,7 +37,7 @@ export default function(){
                     return (
                         <tr>
                             <td>{dado.id}</td>
-                            <td>{dado.nome}</td>
+                            <td>{dado.aluno}</td>
                             <td>{dado.email}</td>
                             <td>{dado.telefone}</td>
                             <td>{dado.cpf}</td>
