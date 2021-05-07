@@ -36,17 +36,17 @@ export default function(){
                   {dados.map((dado) => {
                     return (
                         <tr>
-                            <td>{dado.id}</td>
-                            <td>{dado.aluno}</td>
-                            <td>{dado.email}</td>
-                            <td>{dado.telefone}</td>
-                            <td>{dado.cpf}</td>
-                            <td>{dado.curso}</td>
-                            <td>{dado.cep}</td>
-                            <td>{dado.endereco}</td>
-                            <td>{dado.bairro}</td>
-                            <td>{dado.cidade}</td>
-                            <td>{dado.estado}</td>
+                            <td className="tdform">{dado.id}</td>
+                            <td className="tdform"> {dado.aluno}</td>
+                            <td className="tdform">{dado.email}</td>
+                            <td className="tdform">{dado.telefone}</td>
+                            <td className="tdform">{dado.cpf}</td>
+                            <td className="tdform">{dado.curso}</td>
+                            <td className="tdform">{dado.cep}</td>
+                            <td className="tdform">{dado.endereco}</td>
+                            <td className="tdform">{dado.bairro}</td>
+                            <td className="tdform">{dado.cidade}</td>
+                            <td className="tdform">{dado.estado}</td>
                         </tr>
                         );       
                     })}
