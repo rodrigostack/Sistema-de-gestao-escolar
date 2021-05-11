@@ -12,7 +12,7 @@ export default function(){
     const submit = () => {
         Axios.post("http://localhost:3001/api/cursos",{
             curso: curso, duracao: duracao, mensalidade: mensalidade, modulos: modulos
-        }).then(() => { c
+        }).then(() => { 
             alert('Curso cadastrado com sucesso');
         });
 
