@@ -31,8 +31,19 @@ export default function(){
                         <li><Link className="dropdown-item" to="/cadastroaluno">Cadastrar Alunos</Link></li>
                         <li><Link className="dropdown-item" to="/cadastrocurso">Cadastrar Cursos</Link></li>
                         <li><Link className="dropdown-item" to="/alunoscadastrados">Alunos Cadastrados</Link></li>
-                        <li><a className="dropdown-item" href="#">Cursos Cadastrados</a></li>
+                        <li><Link className="dropdown-item" to="/cursoscadastrados">Cursos Cadastrados</Link></li>
                       </ul>
+                      
+                    </li>
+                    <li className="nav-item dropdown">
+                      <a className="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Consultas
+                      </a>
+                      <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><Link className="dropdown-item" to="/cadastroaluno">Consultar Alunos</Link></li>
+                        <li><Link className="dropdown-item" to="/cadastrocurso">Consultar Cursos</Link></li>
+                      </ul>
+                      
                     </li>
                   </ul>
                 </div>
