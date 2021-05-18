@@ -6,17 +6,16 @@ import InputMask from 'react-input-mask'
 export default function(){
     return(
         <div className="container">
-            <div className="card">
-                <div className="card-header">
-                <nav className="navbar navbar-light bg-light">
+            <div className="card maincard">
+                <div className="card-header mainheader">
+                <nav className="navbar navbar-light">
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Digite o ID do aluno" aria-label="Search"/>
                             <button className="btn btn-outline-primary" type="submit">Buscar</button>
                         </form>
                 </nav>
                 </div>
-                <div className="card-body"> 
-                    <div>Dados do Aluno</div><br/>
+                <div className="card-body mainbody"> 
                     <div className="col-md-6">
                             <label for="inputnome" className="form-label labelsform">Nome Completo:</label>
                             <input type="text" className="form-control" id="inputnome" name="nome" placeholder="Digite seu nome"/>
@@ -33,7 +32,7 @@ export default function(){
                             <label for="inputcpf" className="form-label labelsform">CPF:</label>
                             <InputMask mask="999.999.999-99" type="text" className="form-control" id="inputcpf" name="cpf"  placeholder="Informe seu cpf"/>
                         </div>
-                    <div className="col-12">
+                        <div className="col-12">
                             <label for="inputcurso" className="form-label labelsform">Curso:</label>
                             <input type="text" className="form-control" id="inputcurso" name="curso"  placeholder="Curso de interesse"/>
                         </div>
