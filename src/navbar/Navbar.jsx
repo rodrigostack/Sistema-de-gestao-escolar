@@ -40,7 +40,7 @@ export default function(){
                         Consultas
                       </a>
                       <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><Link className="dropdown-item" to="/cadastroaluno">Consultar Alunos</Link></li>
+                        <li><Link className="dropdown-item" to="/consulta">Consultar alunos</Link></li>
                         <li><Link className="dropdown-item" to="/cadastrocurso">Consultar Cursos</Link></li>
                       </ul>
                       
