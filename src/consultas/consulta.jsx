@@ -1,24 +1,37 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './consulta.css'
 import InputMask from 'react-input-mask'
+import Axios from 'axios'
 
 
 export default function(){
+    const[id, setId] = useState();
+    const[alunosdados, setAlunosdados] = useState();
+
+    const submitid = () =>{
+        Axios.post("http://localhost:3001/api/consultaalunos",{
+            id: id,
+        }).then((response) => {
+            setAlunosdados(response.data.aluno)
+        });
+    }
+
+
     return(
         <div className="container">
             <div className="card maincard">
                 <div className="card-header mainheader">
                 <nav className="navbar navbar-light">
                         <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Digite o ID do aluno" aria-label="Search"/>
-                            <button className="btn btn-outline-primary" type="submit">Buscar</button>
+                            <input className="form-control me-2" type="search" name="id" value={id} onChange={e=> setId(e.target.value)} placeholder="Digite o ID do aluno" aria-label="Search"/>
+                            <button className="btn btn-outline-primary" type="submit" onClick={submitid}>Buscar</button>
                         </form>
                 </nav>
                 </div>
                 <div className="card-body mainbody"> 
                     <div className="col-md-6">
                             <label for="inputnome" className="form-label labelsform">Nome Completo:</label>
-                            <input type="text" className="form-control" id="inputnome" name="nome" placeholder="Digite seu nome"/>
+                            <input type="text" className="form-control" id="inputnome"  value={alunosdados} onChange={e=> setAlunosdados(e.target.value)} placeholder="Digite seu nome"/>
                         </div>
                         <div className="col-md-6">
                             <label for="inputemail" className="form-label labelsform">Email:</label>
