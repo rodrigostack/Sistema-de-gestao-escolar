@@ -10,7 +10,7 @@ export default function(){
 
     const submitid = () =>{
         Axios.post("http://localhost:3001/api/consultaalunos",{
-            id: id,
+            id: id
         }).then((response) => {
             setAlunosdados(response.data.aluno)
         });
@@ -31,7 +31,7 @@ export default function(){
                 <div className="card-body mainbody"> 
                     <div className="col-md-6">
                             <label for="inputnome" className="form-label labelsform">Nome Completo:</label>
-                            <input type="text" className="form-control" id="inputnome"  value={alunosdados} onChange={e=> setAlunosdados(e.target.value)} placeholder="Digite seu nome"/>
+                            <input type="text" className="form-control" id="inputnome"  value={alunosdados}  placeholder="Digite seu nome"/>
                         </div>
                         <div className="col-md-6">
                             <label for="inputemail" className="form-label labelsform">Email:</label>
