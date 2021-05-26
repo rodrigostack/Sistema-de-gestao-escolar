@@ -7,12 +7,14 @@ import Axios from 'axios'
 export default function(){
     const[id, setId] = useState();
     const[alunosdados, setAlunosdados] = useState();
+    const[email, setEmail] = useState();
 
     const submitid = () =>{
         Axios.post("http://localhost:3001/api/consultaalunos",{
             id: id
         }).then((response) => {
-            setAlunosdados(response.data.aluno)
+            setAlunosdados(response.data.aluno);
+            setEmail(response.data.email)
         });
     }
 
@@ -31,11 +33,11 @@ export default function(){
                 <div className="card-body mainbody"> 
                     <div className="col-md-6">
                             <label for="inputnome" className="form-label labelsform">Nome Completo:</label>
-                            <input type="text" className="form-control" id="inputnome"  value={alunosdados}  placeholder="Digite seu nome"/>
+                            <input type="text" className="form-control" id="inputnome" name="aluno" value={alunosdados} onChange={e=> setAlunosdados(e.target.value)} placeholder="Digite seu nome"/>
                         </div>
                         <div className="col-md-6">
                             <label for="inputemail" className="form-label labelsform">Email:</label>
-                            <input type="email" className="form-control" id="inputemail" name="email"  placeholder="Informe seu email"/>
+                            <input type="email" className="form-control" id="inputemail" name="email" value={email} onChange={e=> setEmail(e.target.value)}  placeholder="Informe seu email"/>
                         </div>
                         <div className="col-md-6">
                             <label for="inputtel" className="form-label labelsform">Telefone:</label>
