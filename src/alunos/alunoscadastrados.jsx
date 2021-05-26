@@ -42,7 +42,7 @@ export default function(){
                             <td className="tdform">{dado.telefone}</td>
                             <td className="tdform">{dado.cpf}</td>
                             <td className="tdform">{dado.curso}</td>
-                            <td className="tdform">{dado.cep}</td>
+                            <td className="tdform">{dado.CEP}</td>
                             <td className="tdform">{dado.endereco}</td>
                             <td className="tdform">{dado.bairro}</td>
                             <td className="tdform">{dado.cidade}</td>
