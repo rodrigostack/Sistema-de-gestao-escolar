@@ -17,7 +17,9 @@ export default function(){
     const[estado,setEstado] = useState();
     const[cep,setCep] = useState();
 
-    const submitid = () =>{
+    const submitid = (e) =>{
+        e.preventDefault();
+
         Axios.post("http://localhost:3001/api/consultaalunos",{
             id: id
         }).then((response) => {
@@ -31,6 +33,9 @@ export default function(){
             setCidade(response.data.cidade);
             setEstado(response.data.estado);
             setCep(response.data.CEP);
+        }).catch((erro)=>{
+            console.log(erro);
+            alert('Aluno nao existente!')
         });
     }
 
