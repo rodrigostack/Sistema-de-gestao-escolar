@@ -9,6 +9,7 @@ import Cadastrocurso from '../cadastrocursos/cadastrocurso'
 import Alunoscadastrados from '../alunos/alunoscadastrados'
 import Cursoscadastrados from '../cursos/cursos'
 import Consultas from '../consultas/consulta'
+import Consultacurso from '../consultacurso/consultacurso'
 
 export default function(){
     return(
@@ -22,6 +23,7 @@ export default function(){
             <Route exact path="/alunoscadastrados" component={Alunoscadastrados}/>
             <Route exact path="/cursoscadastrados" component={Cursoscadastrados}/>
             <Route exact path="/consulta" component={Consultas}/>
+            <Route exact path="/consultacurso" component={Consultacurso}/>
 
         </Switch>
     
