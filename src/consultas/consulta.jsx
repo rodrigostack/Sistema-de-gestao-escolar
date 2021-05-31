@@ -35,7 +35,7 @@ export default function(){
             setCep(response.data.CEP);
         }).catch((erro)=>{
             console.log(erro);
-            alert('Aluno nao existente!')
+            alert("Aluno nao existente!")
         });
     }
 
