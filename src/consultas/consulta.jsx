@@ -21,7 +21,7 @@ export default function(){
         e.preventDefault();
 
         Axios.get(`http://localhost:3001/api/consultaalunos/${id}`,{
-            id: id
+            
         }).then((response) => {
             setAlunosdados(response.data.aluno);
             setEmail(response.data.email);

@@ -9,7 +9,7 @@ export default function(){
                 
                 <div className="col-md-5">
                     <img src={logo} className="img-fluid imghome"/>
-                    <button className="btn btn-primary">Saiba Mais...</button>
+                   
                 </div>
                 <div className="col-md-7">
                   <h2 className="h1">A Smart School</h2><br/>
