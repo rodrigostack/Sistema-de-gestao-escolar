@@ -20,7 +20,7 @@ export default function(){
     const submitid = (e) =>{
         e.preventDefault();
 
-        Axios.post("http://localhost:3001/api/consultaalunos",{
+        Axios.get(`http://localhost:3001/api/consultaalunos/${id}`,{
             id: id
         }).then((response) => {
             setAlunosdados(response.data.aluno);
